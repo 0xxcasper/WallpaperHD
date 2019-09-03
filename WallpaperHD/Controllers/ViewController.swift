@@ -11,16 +11,17 @@ import SDWebImage
 import CoreImage
 
 class ViewController: BaseViewController {
-    
+    //--->Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var btnRecent: UIButton!
     @IBOutlet weak var btnSave: UIButton!
     @IBOutlet weak var containerView: UIView!
-    
+    //---->Data
     private lazy var wallpapers = [Wallpaper]()
     private var currentImage: UIImageView!
-
+    
+    //MARK: LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         getDataFromApi()
@@ -28,6 +29,7 @@ class ViewController: BaseViewController {
         setUpCollectionView()
     }
     
+    //MARK: SETUP VIEW
     private func setUpView() {
         slider.alpha = 0
         btnRecent.layer.cornerRadius = 12
@@ -46,10 +48,9 @@ class ViewController: BaseViewController {
         collectionView.delegate = self
     }
     
+    //--->REQUEST API
     private func getDataFromApi() {
-        DispatchQueue.main.async {
-            self.showhub()
-        }
+        DispatchQueue.main.async {self.showhub()}
         DataCenter.shared.callApiGetAllImageWallpaper(Constants.APIKey.devURL, nil, .get) { (Wallpapers) in
             if let wallpapers = Wallpapers {
                 self.wallpapers = wallpapers
@@ -66,7 +67,7 @@ class ViewController: BaseViewController {
             }
         }
     }
-    
+    //--->HELPER FUNCTION
     private func animateShowSlider() {
         slider.value = 0.5
         currentImage.addBlurEffect()
@@ -83,7 +84,7 @@ class ViewController: BaseViewController {
             self.btnRecent.alpha = 1
         }
     }
-    
+    //--->HANDLE SAVE IMAGE
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
             DispatchQueue.main.async {
@@ -101,7 +102,7 @@ class ViewController: BaseViewController {
         animateHideSlider()
     }
 }
-
+//MARK: - ACTIONS
 extension ViewController {
     
     @IBAction func handleSlide(_ sender: UISlider) {
@@ -122,14 +123,13 @@ extension ViewController {
     }
     
     @IBAction func handleSave(_ sender: UIButton) {
-        DispatchQueue.main.async {
-            self.showhub()
-        }
+        DispatchQueue.main.async {self.showhub()}
         let img = self.containerView.takeScreenshot()
         UIImageWriteToSavedPhotosAlbum(img, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
 }
 
+//MARK: - COLLECTION VIEW DELEGATE - DATASOURCE
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -148,8 +148,14 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         animateHideSlider()
         let index = Int(scrollView.contentOffset.x/Constants.SCREEN_WIDTH)
-        let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0)) as! ImageCollectionViewCell
-        currentImage = cell.image
+        guard let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0)) else {return}
+        if(cell is ImageCollectionViewCell) {
+            currentImage = (cell as! ImageCollectionViewCell).image
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        animateHideSlider()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
