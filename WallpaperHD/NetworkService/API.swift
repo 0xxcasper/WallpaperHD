@@ -8,27 +8,18 @@
 
 import Foundation
 
-public enum HTTPMethod: String {
-    case options = "OPTIONS"
-    case get     = "GET"
-    case head    = "HEAD"
-    case post    = "POST"
-    case put     = "PUT"
-    case patch   = "PATCH"
-    case delete  = "DELETE"
-    case trace   = "TRACE"
-    case connect = "CONNECT"
-}
-
 public typealias HTTPHeaders = [String: String]
-public typealias Parameters = [String:Any]
+public typealias Parameters = [String: Any]
+public typealias UrlComponents = [URLQueryItem]
 public typealias JSON = [String:AnyObject]
 
 struct API {
     
-    static func requestDataWith(_ urlString: String,_ header: HTTPHeaders?,_ param: Parameters?,_ httpMethod: HTTPMethod,_ completion:((_ data:Data?,_ error:String?,_ code:Int?)->Void)?) {
+    static func requestDataWith(_ urlString: String,_ header: HTTPHeaders?,_ components: UrlComponents?,_ param: Parameters?,_ httpMethod: HTTPMethod,_ completion:((_ data:Data?,_ error:String?,_ code:Int?)->Void)?) {
         
-        guard let url = URL(string: urlString) else {return}
+        guard var urlComponents = URLComponents(string: urlString) else { return }
+        urlComponents.queryItems = components
+        guard let url = urlComponents.url else { return }
         var request = URLRequest(url: url)
         
         if let header = header {
@@ -38,8 +29,8 @@ struct API {
         }
         request.httpMethod = httpMethod.rawValue
         
-        if let param = param {
-            let body = try! JSONSerialization.data(withJSONObject: param, options: .prettyPrinted)
+        if let params = param {
+            let body = try! JSONSerialization.data(withJSONObject: params, options: [])
             request.httpBody = body
         }
         

@@ -24,6 +24,7 @@
 		3FA5C6C7231CFB2100B16845 /* UIImageView+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA5C6C6231CFB2100B16845 /* UIImageView+Extenstion.swift */; };
 		6983B651F1DD2CDA30C606E0 /* Pods_WallpaperHDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2BFAECA6B135D79D3648A7 /* Pods_WallpaperHDTests.framework */; };
 		873E8D976B628C5518287512 /* Pods_WallpaperHDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD7B1B427BD492244B03453 /* Pods_WallpaperHDUITests.framework */; };
+		AB3C630C232009D6006D9F62 /* UrlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C630B232009D6006D9F62 /* UrlComponent.swift */; };
 		ABB49193231EA2AF00242957 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB49192231EA2AF00242957 /* UIView+Extension.swift */; };
 		DB657376231E36D90069CF06 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB657375231E36D90069CF06 /* Loading.swift */; };
 		DB65737D231E7A2A0069CF06 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB65737C231E7A2A0069CF06 /* BaseViewController.swift */; };
@@ -73,6 +74,7 @@
 		5BD7B1B427BD492244B03453 /* Pods_WallpaperHDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WallpaperHDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65EB54DBDD86236C6319E289 /* Pods-WallpaperHDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallpaperHDUITests.debug.xcconfig"; path = "Target Support Files/Pods-WallpaperHDUITests/Pods-WallpaperHDUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F816E8525841E3B43C7F8AF /* Pods-WallpaperHDTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallpaperHDTests.release.xcconfig"; path = "Target Support Files/Pods-WallpaperHDTests/Pods-WallpaperHDTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB3C630B232009D6006D9F62 /* UrlComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlComponent.swift; sourceTree = "<group>"; };
 		ABB49192231EA2AF00242957 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		AD59DD3C2664C762869EFBF7 /* Pods-WallpaperHDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallpaperHDUITests.release.xcconfig"; path = "Target Support Files/Pods-WallpaperHDUITests/Pods-WallpaperHDUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C791EDB21242AF00A0752AA6 /* Pods_WallpaperHD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WallpaperHD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,6 +219,7 @@
 			children = (
 				3FA5C6B8231CE06C00B16845 /* API.swift */,
 				3FA5C6BA231CE28F00B16845 /* DataCenter.swift */,
+				AB3C630B232009D6006D9F62 /* UrlComponent.swift */,
 				3FA5C6BF231CE3B600B16845 /* Params.swift */,
 			);
 			path = NetworkService;
@@ -501,6 +504,7 @@
 				ABB49193231EA2AF00242957 /* UIView+Extension.swift in Sources */,
 				3FA5C67F231CD96F00B16845 /* AppDelegate.swift in Sources */,
 				3FA5C6B6231CDDE100B16845 /* Constants.swift in Sources */,
+				AB3C630C232009D6006D9F62 /* UrlComponent.swift in Sources */,
 				3FA5C6C7231CFB2100B16845 /* UIImageView+Extenstion.swift in Sources */,
 				3FA5C6B9231CE06C00B16845 /* API.swift in Sources */,
 				3FA5C6BE231CE2C500B16845 /* Wallpaper.swift in Sources */,

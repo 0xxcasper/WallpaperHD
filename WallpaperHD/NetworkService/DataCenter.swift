@@ -17,9 +17,9 @@ struct DataCenter {
         return _header
     }
     
-    func callApiGetAllImageWallpaper(_ url: String,_ params: Parameters?,_ httpMethod: HTTPMethod, completion:((_ data: [Wallpaper]?)->Void)?){
+    func callApiGetAllImageWallpaper(_ url: String,_ components: UrlComponents,_ params: Parameters?,_ httpMethod: HTTPMethod, completion:((_ data: [Wallpaper]?)->Void)?){
         
-        API.requestDataWith(url, nil, params, httpMethod) { (Data, Error, Code) in
+        API.requestDataWith(url, nil, components, nil, httpMethod) { (Data, Error, Code) in
             if let data = Data {
                 do {
                     let wallpapers = try JSONDecoder().decode(Wallpapers.self, from: data)

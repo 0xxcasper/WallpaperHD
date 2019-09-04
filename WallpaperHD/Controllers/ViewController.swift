@@ -20,10 +20,12 @@ class ViewController: BaseViewController {
     //---->Data
     private lazy var wallpapers = [Wallpaper]()
     private var currentImage: UIImageView!
+    private var currentPage = 1
     
     //MARK: LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
+        DispatchQueue.main.async {self.showhub()}
         getDataFromApi()
         setUpView()
         setUpCollectionView()
@@ -49,11 +51,11 @@ class ViewController: BaseViewController {
     }
     
     //--->REQUEST API
-    private func getDataFromApi() {
-        DispatchQueue.main.async {self.showhub()}
-        DataCenter.shared.callApiGetAllImageWallpaper(Constants.APIKey.devURL, nil, .get) { (Wallpapers) in
+    private func getDataFromApi(_ page: Int) {
+        let components = UrlComponent.createUrlComponentWallpaper(page)
+        DataCenter.shared.callApiGetAllImageWallpaper(Constants.APIKey.devURL, components, nil, .get) { (Wallpapers) in
             if let wallpapers = Wallpapers {
-                self.wallpapers = wallpapers
+                self.wallpapers.append(contentsOf: wallpapers)
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                     self.removeHub()
@@ -67,6 +69,7 @@ class ViewController: BaseViewController {
             }
         }
     }
+    
     //--->HELPER FUNCTION
     private func animateShowSlider() {
         slider.value = 0.5
@@ -149,8 +152,12 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
         animateHideSlider()
         let index = Int(scrollView.contentOffset.x/Constants.SCREEN_WIDTH)
         guard let cell = collectionView.cellForItem(at: IndexPath(row: index, section: 0)) else {return}
-        if(cell is ImageCollectionViewCell) {
+        if (cell is ImageCollectionViewCell) {
             currentImage = (cell as! ImageCollectionViewCell).image
+        }
+        if index == (self.wallpapers.count - 2) {
+            currentPage = currentPage + 1;
+            getDataFromApi(currentPage)
         }
     }
     
