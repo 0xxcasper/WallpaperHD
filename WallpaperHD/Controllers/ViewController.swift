@@ -26,7 +26,7 @@ class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.async {self.showhub()}
-        getDataFromApi()
+        getDataFromApi(currentPage)
         setUpView()
         setUpCollectionView()
     }
