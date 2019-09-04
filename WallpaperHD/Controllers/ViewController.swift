@@ -25,7 +25,6 @@ class ViewController: BaseViewController {
     //MARK: LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.async {self.showhub()}
         getDataFromApi(currentPage)
         setUpView()
         setUpCollectionView()
@@ -52,6 +51,7 @@ class ViewController: BaseViewController {
     
     //--->REQUEST API
     private func getDataFromApi(_ page: Int) {
+        DispatchQueue.main.async {self.showhub()}
         let components = UrlComponent.createUrlComponentWallpaper(page)
         DataCenter.shared.callApiGetAllImageWallpaper(Constants.APIKey.devURL, components, nil, .get) { (Wallpapers) in
             if let wallpapers = Wallpapers {
