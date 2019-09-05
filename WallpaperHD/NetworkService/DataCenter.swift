@@ -8,6 +8,7 @@
 
 import Foundation
 
+let services = DataCenter.shared
 struct DataCenter {
     
     static let shared = DataCenter()

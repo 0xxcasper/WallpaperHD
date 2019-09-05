@@ -53,7 +53,7 @@ class ViewController: BaseViewController {
     private func getDataFromApi(_ page: Int) {
         DispatchQueue.main.async {self.showhub()}
         let components = UrlComponent.createUrlComponentWallpaper(page)
-        DataCenter.shared.callApiGetAllImageWallpaper(Constants.APIKey.devURL, components, nil, .get) { (Wallpapers) in
+        services.callApiGetAllImageWallpaper(Constants.APIKey.devURL, components, nil, .get) { (Wallpapers) in
             if let wallpapers = Wallpapers {
                 self.wallpapers.append(contentsOf: wallpapers)
                 DispatchQueue.main.async {
