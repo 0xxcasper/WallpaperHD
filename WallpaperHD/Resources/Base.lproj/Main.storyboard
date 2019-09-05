@@ -106,7 +106,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="btnEdit" destination="44h-Od-Nf9" id="6NJ-t2-Vgp"/>
                         <outlet property="btnRecent" destination="i6n-aL-0rK" id="Ihy-cC-t0c"/>
                         <outlet property="btnSave" destination="9ad-bf-dzg" id="Vfk-ST-cwh"/>
                         <outlet property="collectionView" destination="m5Y-bZ-GT0" id="gWf-O6-2V8"/>
