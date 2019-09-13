@@ -33,5 +33,25 @@ struct DataCenter {
             }
         }
     }
+    
+    func callApiGetAllImageWallpaperTable(_ url: String,_ components: UrlComponents,_ params: Parameters?,_ httpMethod: HTTPMethod, completion:((_ data: [HD_WALLPAPER]?)->Void)?){
+                API.requestDataWith(url, nil, components, nil, httpMethod) { (Data, Error, Code) in
+            if let data = Data {
+                do {
+                    let category = try JSONDecoder().decode(CategoryList.self, from: data)
+                    completion!(category.hD_WALLPAPER)
+                    return
+                } catch {
+                    completion!(nil)
+                    return
+                }
+            } else {
+                completion!(nil)
+                return
+            }
+        }
+    }
+
+    
 }
 

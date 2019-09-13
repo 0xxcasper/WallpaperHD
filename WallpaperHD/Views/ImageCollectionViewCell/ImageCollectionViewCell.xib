@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="179" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZCj-X2-mjJ">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZCj-X2-mjJ" customClass="BaseUIImageView" customModule="WallpaperHD" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="179" height="150"/>
                     </imageView>
                 </subviews>
@@ -33,7 +33,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="179" height="150"/>
             <connections>
-                <outlet property="image" destination="ZCj-X2-mjJ" id="Jfl-XV-IMa"/>
+                <outlet property="image" destination="ZCj-X2-mjJ" id="wq7-Ht-IK1"/>
             </connections>
             <point key="canvasLocation" x="231.15942028985509" y="166.07142857142856"/>
         </collectionViewCell>

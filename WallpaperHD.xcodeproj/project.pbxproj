@@ -26,8 +26,19 @@
 		873E8D976B628C5518287512 /* Pods_WallpaperHDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD7B1B427BD492244B03453 /* Pods_WallpaperHDUITests.framework */; };
 		AB3C630C232009D6006D9F62 /* UrlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3C630B232009D6006D9F62 /* UrlComponent.swift */; };
 		ABB49193231EA2AF00242957 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB49192231EA2AF00242957 /* UIView+Extension.swift */; };
-		DB657376231E36D90069CF06 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB657375231E36D90069CF06 /* Loading.swift */; };
+		DB05AAEC232BD977006B37B3 /* BaseUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05AAE9232BD977006B37B3 /* BaseUIImageView.swift */; };
+		DB05AAED232BD977006B37B3 /* LoadingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05AAEA232BD977006B37B3 /* LoadingImageView.swift */; };
+		DB05AAEE232BD977006B37B3 /* LoadingImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB05AAEB232BD977006B37B3 /* LoadingImageView.xib */; };
+		DB05AAF0232BDA09006B37B3 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05AAEF232BDA09006B37B3 /* BaseView.swift */; };
+		DB05AAF8232BE94D006B37B3 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05AAF7232BE94D006B37B3 /* ContactVC.swift */; };
+		DB05AAFC232BEA27006B37B3 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB05AAFA232BEA27006B37B3 /* ContactTableViewCell.swift */; };
+		DB05AAFD232BEA27006B37B3 /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB05AAFB232BEA27006B37B3 /* ContactTableViewCell.xib */; };
 		DB65737D231E7A2A0069CF06 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB65737C231E7A2A0069CF06 /* BaseViewController.swift */; };
+		DBA24197232B64530012ACA8 /* El Capitan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBA24196232B64530012ACA8 /* El Capitan.jpg */; };
+		DBAF1F96232A136B00C8682E /* ImageTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAF1F95232A136B00C8682E /* ImageTableView.swift */; };
+		DBAF1F98232A191400C8682E /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAF1F97232A191400C8682E /* CategoryList.swift */; };
+		DBC8F7FD232A9484005F2E85 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC8F7FB232A9484005F2E85 /* ImageTableViewCell.swift */; };
+		DBC8F7FE232A9484005F2E85 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC8F7FC232A9484005F2E85 /* ImageTableViewCell.xib */; };
 		F8C7ABEC7B08FFBF51136BFF /* Pods_WallpaperHD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C791EDB21242AF00A0752AA6 /* Pods_WallpaperHD.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,8 +91,19 @@
 		C791EDB21242AF00A0752AA6 /* Pods_WallpaperHD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WallpaperHD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2BFAECA6B135D79D3648A7 /* Pods_WallpaperHDTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WallpaperHDTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF560589DD55943E436AB09F /* Pods-WallpaperHDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallpaperHDTests.debug.xcconfig"; path = "Target Support Files/Pods-WallpaperHDTests/Pods-WallpaperHDTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DB657375231E36D90069CF06 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		DB05AAE9232BD977006B37B3 /* BaseUIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUIImageView.swift; sourceTree = "<group>"; };
+		DB05AAEA232BD977006B37B3 /* LoadingImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingImageView.swift; sourceTree = "<group>"; };
+		DB05AAEB232BD977006B37B3 /* LoadingImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingImageView.xib; sourceTree = "<group>"; };
+		DB05AAEF232BDA09006B37B3 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		DB05AAF7232BE94D006B37B3 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
+		DB05AAFA232BEA27006B37B3 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		DB05AAFB232BEA27006B37B3 /* ContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
 		DB65737C231E7A2A0069CF06 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DBA24196232B64530012ACA8 /* El Capitan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "El Capitan.jpg"; sourceTree = "<group>"; };
+		DBAF1F95232A136B00C8682E /* ImageTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableView.swift; sourceTree = "<group>"; };
+		DBAF1F97232A191400C8682E /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
+		DBC8F7FB232A9484005F2E85 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		DBC8F7FC232A9484005F2E85 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		E75F4693B154A406354C57BD /* Pods-WallpaperHD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallpaperHD.release.xcconfig"; path = "Target Support Files/Pods-WallpaperHD/Pods-WallpaperHD.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +160,7 @@
 		3FA5C67D231CD96E00B16845 /* WallpaperHD */ = {
 			isa = PBXGroup;
 			children = (
+				DBA24196232B64530012ACA8 /* El Capitan.jpg */,
 				3FA5C67E231CD96F00B16845 /* AppDelegate.swift */,
 				DB657374231E36C10069CF06 /* Helpers */,
 				3FA5C6C5231CFB0800B16845 /* Extensions */,
@@ -173,6 +196,11 @@
 		3FA5C6AC231CDBA000B16845 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DB05AAF9232BEA12006B37B3 /* ContactTableViewCell */,
+				DB05AAF3232BE0EF006B37B3 /* LoadingImageView */,
+				DB05AAF2232BE0D9006B37B3 /* BaseUIImageView */,
+				DB05AAF1232BE0D1006B37B3 /* BaseView */,
+				DBC8F7FA232A9465005F2E85 /* ImageTableViewCell */,
 				3FA5C6AD231CDBA600B16845 /* ImageCollectionViewCell */,
 			);
 			path = Views;
@@ -200,8 +228,10 @@
 		3FA5C6B3231CDC3300B16845 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3FA5C680231CD96F00B16845 /* ViewController.swift */,
-				DB65737C231E7A2A0069CF06 /* BaseViewController.swift */,
+				DB05AAF5232BE223006B37B3 /* BaseViewController */,
+				DB05AAF6232BE938006B37B3 /* ContactVC */,
+				DBAF1F94232A125F00C8682E /* ImageTableView */,
+				DB05AAF4232BE212006B37B3 /* ViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -229,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				3FA5C6BD231CE2C500B16845 /* Wallpaper.swift */,
+				DBAF1F97232A191400C8682E /* CategoryList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,12 +296,86 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DB05AAF1232BE0D1006B37B3 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				DB05AAEF232BDA09006B37B3 /* BaseView.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		DB05AAF2232BE0D9006B37B3 /* BaseUIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				DB05AAE9232BD977006B37B3 /* BaseUIImageView.swift */,
+			);
+			path = BaseUIImageView;
+			sourceTree = "<group>";
+		};
+		DB05AAF3232BE0EF006B37B3 /* LoadingImageView */ = {
+			isa = PBXGroup;
+			children = (
+				DB05AAEA232BD977006B37B3 /* LoadingImageView.swift */,
+				DB05AAEB232BD977006B37B3 /* LoadingImageView.xib */,
+			);
+			path = LoadingImageView;
+			sourceTree = "<group>";
+		};
+		DB05AAF4232BE212006B37B3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3FA5C680231CD96F00B16845 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DB05AAF5232BE223006B37B3 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB65737C231E7A2A0069CF06 /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		DB05AAF6232BE938006B37B3 /* ContactVC */ = {
+			isa = PBXGroup;
+			children = (
+				DB05AAF7232BE94D006B37B3 /* ContactVC.swift */,
+			);
+			path = ContactVC;
+			sourceTree = "<group>";
+		};
+		DB05AAF9232BEA12006B37B3 /* ContactTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DB05AAFA232BEA27006B37B3 /* ContactTableViewCell.swift */,
+				DB05AAFB232BEA27006B37B3 /* ContactTableViewCell.xib */,
+			);
+			path = ContactTableViewCell;
+			sourceTree = "<group>";
+		};
 		DB657374231E36C10069CF06 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				DB657375231E36D90069CF06 /* Loading.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DBAF1F94232A125F00C8682E /* ImageTableView */ = {
+			isa = PBXGroup;
+			children = (
+				DBAF1F95232A136B00C8682E /* ImageTableView.swift */,
+			);
+			path = ImageTableView;
+			sourceTree = "<group>";
+		};
+		DBC8F7FA232A9465005F2E85 /* ImageTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DBC8F7FB232A9484005F2E85 /* ImageTableViewCell.swift */,
+				DBC8F7FC232A9484005F2E85 /* ImageTableViewCell.xib */,
+			);
+			path = ImageTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,10 +486,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB05AAFD232BEA27006B37B3 /* ContactTableViewCell.xib in Resources */,
+				DBA24197232B64530012ACA8 /* El Capitan.jpg in Resources */,
+				DBC8F7FE232A9484005F2E85 /* ImageTableViewCell.xib in Resources */,
 				3FA5C689231CD97000B16845 /* LaunchScreen.storyboard in Resources */,
 				3FA5C686231CD97000B16845 /* Assets.xcassets in Resources */,
 				3FA5C6B1231CDBCC00B16845 /* ImageCollectionViewCell.xib in Resources */,
 				3FA5C684231CD96F00B16845 /* Main.storyboard in Resources */,
+				DB05AAEE232BD977006B37B3 /* LoadingImageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,15 +606,22 @@
 			files = (
 				3FA5C6BB231CE28F00B16845 /* DataCenter.swift in Sources */,
 				3FA5C6B0231CDBCC00B16845 /* ImageCollectionViewCell.swift in Sources */,
-				DB657376231E36D90069CF06 /* Loading.swift in Sources */,
+				DB05AAEC232BD977006B37B3 /* BaseUIImageView.swift in Sources */,
+				DBAF1F98232A191400C8682E /* CategoryList.swift in Sources */,
 				3FA5C681231CD96F00B16845 /* ViewController.swift in Sources */,
 				3FA5C6C0231CE3B600B16845 /* Params.swift in Sources */,
+				DBAF1F96232A136B00C8682E /* ImageTableView.swift in Sources */,
 				DB65737D231E7A2A0069CF06 /* BaseViewController.swift in Sources */,
 				ABB49193231EA2AF00242957 /* UIView+Extension.swift in Sources */,
+				DBC8F7FD232A9484005F2E85 /* ImageTableViewCell.swift in Sources */,
+				DB05AAED232BD977006B37B3 /* LoadingImageView.swift in Sources */,
 				3FA5C67F231CD96F00B16845 /* AppDelegate.swift in Sources */,
 				3FA5C6B6231CDDE100B16845 /* Constants.swift in Sources */,
 				AB3C630C232009D6006D9F62 /* UrlComponent.swift in Sources */,
 				3FA5C6C7231CFB2100B16845 /* UIImageView+Extenstion.swift in Sources */,
+				DB05AAF8232BE94D006B37B3 /* ContactVC.swift in Sources */,
+				DB05AAFC232BEA27006B37B3 /* ContactTableViewCell.swift in Sources */,
+				DB05AAF0232BDA09006B37B3 /* BaseView.swift in Sources */,
 				3FA5C6B9231CE06C00B16845 /* API.swift in Sources */,
 				3FA5C6BE231CE2C500B16845 /* Wallpaper.swift in Sources */,
 			);

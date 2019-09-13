@@ -10,7 +10,7 @@ import UIKit
 
 class ImageCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var image: BaseUIImageView!
     
     class var nib: UINib {
         return UINib(nibName: identifier, bundle: nil)
@@ -22,7 +22,5 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
-
 }

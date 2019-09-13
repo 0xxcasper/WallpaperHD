@@ -8,13 +8,22 @@
 
 import Foundation
 
-
 struct UrlComponent {
     
-    static func createUrlComponentWallpaper(_ page: Int)-> UrlComponents {
-        let components = [URLQueryItem(name: "cat_id", value: "42"),
-                          URLQueryItem(name: "page", value: String(page)),
-                          URLQueryItem(name: "fbclid", value: "IwAR3tDnyhYXteBZbHoTP4HG-KZZcDWSgM2ZGQQ1QZbR29xrojL6awb37Q_qI")]
+    static func createUrlComponentWallpaper(_ page: Int, _ cat_id: Int)-> UrlComponents {
+        let components = [URLQueryItem(name: "cat_id", value: String(cat_id)),
+                          URLQueryItem(name: "page", value: String(page))]
+        return components
+    }
+    
+    static func createUrlComponentWallpaperRecent(_ page: Int)-> UrlComponents {
+        let components = [URLQueryItem(name: "latest", value: ""),
+                          URLQueryItem(name: "page", value: String(page))]
+        return components
+    }
+    
+    static func createUrlCategoryList()-> UrlComponents {
+        let components = [URLQueryItem(name: "cat_list", value: "")]
         return components
     }
 }
